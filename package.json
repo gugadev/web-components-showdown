@@ -1,0 +1,45 @@
+{
+  "name": "web-components-showdown",
+  "version": "1.0.0",
+  "description": "PoC using Web Components in real React &amp; Angular projects.",
+  "main": "rollup.config.js",
+  "scripts": {
+    "start": "npx rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gugadev/web-components-showdown.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gugadev/web-components-showdown/issues"
+  },
+  "homepage": "https://github.com/gugadev/web-components-showdown#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-typescript": "^7.3.3",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "babel-jest": "^24.8.0",
+    "cross-env": "^5.2.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.17.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.6.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-node-resolve": "^4.2.4",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-terser": "^4.0.4",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.4",
+    "lit-element": "^2.1.0",
+    "lit-html": "^1.0.0"
+  }
+}

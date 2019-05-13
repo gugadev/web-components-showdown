@@ -1,2 +1,5 @@
-# web-components-showdown
-PoC using Web Components in real React &amp; Angular projects.
+# Web Components Showdown
+
+PoC using Web Components in real React & Angular projects.
+
+# ToDo
