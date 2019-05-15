@@ -1,6 +1,15 @@
+@import '../sass/functions';
+
 button {
 	background: var(--background, #fff);
 	border: 1px solid transparent;
 	border-radius: var(--radius, 2px);
+	box-shadow: elevation(1);
+	color: var(--color, #fff);
 	font-size: 15px;
+
+	&.primary {
+		background: var(--background, #d53400);
+		color: var(--color, #fff);
+	}
 }

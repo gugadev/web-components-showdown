@@ -1,16 +1,25 @@
-import { resolve } from 'path'
-import node from 'rollup-plugin-node-resolve'
+import path from 'path'
+import resolve from 'rollup-plugin-node-resolve'
 import babel from 'rollup-plugin-babel'
+import commonjs from 'rollup-plugin-commonjs'
 import sass from 'rollup-plugin-sass'
 // import postcss from 'rollup-plugin-postcss'
 // import { terser } from 'rollup-plugin-terser'
 
-const ELEMENTS_PATH = resolve(__dirname, 'src')
-const DIST_PATH = resolve(__dirname, 'dist')
+const ELEMENTS_PATH = path.resolve(__dirname, 'src')
+const DIST_PATH = path.resolve(__dirname, 'dist')
+
+const extensions = [
+  '.ts', '.js'
+]
 
 const plugins = [
-  node({ module: true }),
-  babel(),
+  resolve({
+    extensions,
+    mainFields: ['module']
+  }),
+  commonjs(),
+  babel({ extensions }),
   sass({
     modules: false,
     inject: false
@@ -19,9 +28,9 @@ const plugins = [
 ]
 
 const buildConfig = (name) => ({
-  input: resolve(ELEMENTS_PATH, name, `${name}.component.ts`),
+  input: path.resolve(ELEMENTS_PATH, name, `${name}.component.ts`),
   output: {
-    file: resolve(DIST_PATH, name, `${name}.mjs`),
+    file: path.resolve(DIST_PATH, `${name}.mjs`),
     format: 'esm'
   },
   plugins
