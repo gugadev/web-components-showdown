@@ -6,7 +6,7 @@ import commonjs from 'rollup-plugin-commonjs'
 import postcss from 'rollup-plugin-postcss'
 // import { terser } from 'rollup-plugin-terser'
 
-const ELEMENTS_PATH = path.resolve(__dirname, 'src')
+const ELEMENTS_PATH = path.resolve(__dirname, 'components')
 const DIST_PATH = path.resolve(__dirname, 'dist')
 
 const extensions = [
@@ -37,5 +37,8 @@ const buildConfig = (name) => ({
 })
 
 module.exports = [
-  buildConfig('button')
+  buildConfig('button'),
+  buildConfig('checkbox'),
+  buildConfig('input'),
+  buildConfig('select')
 ]

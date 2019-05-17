@@ -5,7 +5,8 @@ import styles from './button.styles.pcss'
 
 @customElement('one-button')
 export class Button extends LitElement {
-  @property() kind: string = ''
+  @property() kind: string = 'none'
+  @property({ type: Boolean }) outline: boolean = false
 
   render() {
     return html`
@@ -18,7 +19,9 @@ export class Button extends LitElement {
 
   private getClass(): (part: Part) => void {
     const classes = {
-      [this.kind]: true
+      ripple: true,
+      outline: this.outline,
+      [this.kind]: true,
     }
     return classMap(classes)
   }

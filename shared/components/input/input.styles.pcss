@@ -1,0 +1,23 @@
+input {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 15px;
+  color: #444;
+  /*box-shadow: 0 1px 2px 0 rgba(0,0,0,.2) inset;*/
+  outline: none;
+  height: 40px;
+  padding: 0 12px;
+
+  &:focus, &.focus {
+    border-color: var(--secondary);
+  }
+  &.valid {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+  &.invalid {
+    border-color: var(--danger);
+    color: var(--danger);
+  }
+}

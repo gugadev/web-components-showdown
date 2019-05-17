@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DS Testing</title>
+  <script type="module" src="dist/button.mjs"></script>
+  <script type="module" src="dist/checkbox.mjs"></script>
+  <script type="module" src="dist/input.mjs"></script>
+  <script type="module" src="dist/select.mjs"></script>
+  <style>
+  :root {
+    --primary: #00B166;
+    --warning: #FF6319;
+    --danger: #FF0048;
+    --secondary: #50BAE2;
+    --alternative: #7070EF;
+  }
+  </style>
+</head>
+<body>
+  <one-button kind="primary">primary</one-button>
+  <one-button kind="secondary">second</one-button>
+  <one-button kind="warning">warning</one-button>
+  <one-button kind="danger">danger</one-button>
+  <one-button kind="alternative">alterna</one-button>
+  <br /><br />
+  <one-button kind="primary" outline>primary</one-button>
+  <one-button kind="secondary" outline>second</one-button>
+  <one-button kind="warning" outline>warning</one-button>
+  <one-button kind="danger" outline>danger</one-button>
+  <one-button kind="alternative" outline>alterna</one-button>
+  <br /><br />
+  <one-input placeholder="Default..." value="Default state"></one-input>
+  <one-input placeholder="Focused..." focuz value="Focused state"></one-input>
+  <br /><br />
+  <one-input placeholder="Valid..." valid value="Valid state"></one-input>
+  <one-input placeholder="Invalid..." invalid value="Invalid state"></one-input>
+</body>
+</html>
