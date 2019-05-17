@@ -9,7 +9,7 @@
     "experimentalDecorators": true
   },
   "include": [
-    "src",
+    "components",
     "typings.d.ts"
   ],
   "exclude": [

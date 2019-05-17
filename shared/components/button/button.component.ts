@@ -1,7 +1,7 @@
 import { LitElement, html, property, customElement } from 'lit-element'
 import { classMap } from 'lit-html/directives/class-map'
 import { Part } from 'lit-html'
-import styles from './button.styles.scss'
+import styles from './button.styles.pcss'
 
 @customElement('one-button')
 export class Button extends LitElement {

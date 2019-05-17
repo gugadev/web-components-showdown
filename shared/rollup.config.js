@@ -2,8 +2,8 @@ import path from 'path'
 import resolve from 'rollup-plugin-node-resolve'
 import babel from 'rollup-plugin-babel'
 import commonjs from 'rollup-plugin-commonjs'
-import sass from 'rollup-plugin-sass'
-// import postcss from 'rollup-plugin-postcss'
+// import sass from 'rollup-plugin-sass'
+import postcss from 'rollup-plugin-postcss'
 // import { terser } from 'rollup-plugin-terser'
 
 const ELEMENTS_PATH = path.resolve(__dirname, 'src')
@@ -20,7 +20,7 @@ const plugins = [
   }),
   commonjs(),
   babel({ extensions }),
-  sass({
+  postcss({
     modules: false,
     inject: false
   }),
